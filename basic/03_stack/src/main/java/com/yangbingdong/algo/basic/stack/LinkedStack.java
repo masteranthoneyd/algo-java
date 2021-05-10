@@ -56,6 +56,12 @@ public class LinkedStack<T> implements Stack<T> {
     }
 
     @Override
+    public void clean() {
+        head = null;
+        size = 0;
+    }
+
+    @Override
     public String toString() {
         if (head == null) {
             return "";

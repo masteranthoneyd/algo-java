@@ -54,6 +54,14 @@ public class ArrayStack<T> implements Stack<T> {
         return size;
     }
 
+    @Override
+    public void clean() {
+        for (int i = 0; i < size; i++) {
+            array[i] = null;
+        }
+        size = 0;
+    }
+
     @SuppressWarnings("unchecked")
     private void grow() {
         this.capacity = this.capacity << 1;

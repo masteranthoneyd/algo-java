@@ -16,4 +16,6 @@ public interface Stack<T> {
 
     int size();
 
+    void clean();
+
 }
