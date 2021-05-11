@@ -8,7 +8,7 @@ import lombok.Getter;
  */
 public class SinglyLinkedList<T> {
 
-    private Node head;
+    private SNode<T> head;
     @Getter
     private int size;
 
@@ -21,18 +21,18 @@ public class SinglyLinkedList<T> {
     }
 
     public void add(T t) {
-        Node n = new Node(t);
+        SNode<T> n = new SNode<>(t);
         n.next = head;
         head = n;
         size++;
     }
 
     public void addLast(T t) {
-        Node n = new Node(t);
+        SNode<T> n = new SNode<>(t);
         if (head == null) {
             head = n;
         } else {
-            Node last = head;
+            SNode<T> last = head;
             while (last.next != null) {
                 last = last.next;
             }
@@ -42,7 +42,7 @@ public class SinglyLinkedList<T> {
     }
 
     public T removeFirstByValue(T t) {
-        Node n = findFirstNode(t);
+        SNode<T> n = findFirstNode(t);
         if (n == null) {
             return null;
         }
@@ -50,7 +50,7 @@ public class SinglyLinkedList<T> {
             head = head.next;
             size--;
         } else {
-            Node pre = findPre(n);
+            SNode<T> pre = findPre(n);
             if (pre != null) {
                 pre.next = pre.next.next;
                 size--;
@@ -59,8 +59,8 @@ public class SinglyLinkedList<T> {
         return n.value;
     }
 
-    protected Node findFirstNode(T t) {
-        Node n = head;
+    protected SNode<T> findFirstNode(T t) {
+        SNode<T> n = head;
         while (n != null) {
             if (n.value.equals(t)) {
                 return n;
@@ -70,8 +70,8 @@ public class SinglyLinkedList<T> {
         return null;
     }
 
-    protected Node findPre(Node n) {
-        Node pre = head;
+    protected SNode<T> findPre(SNode<T> n) {
+        SNode<T> pre = head;
         while (pre.next != null) {
             if (pre.next.equals(n)) {
                 return pre;
@@ -91,24 +91,7 @@ public class SinglyLinkedList<T> {
         if (head == null) {
             return "";
         }
-        StringBuilder sb = new StringBuilder();
-        Node n = head;
-        while (n != null) {
-            sb.append(n.value);
-            n = n.next;
-            if (n != null) {
-                sb.append(" -> ");
-            }
-        }
-        return sb.toString();
+        return head.toString();
     }
 
-    class Node{
-        T value;
-        Node next;
-
-        public Node(T value) {
-            this.value = value;
-        }
-    }
 }
