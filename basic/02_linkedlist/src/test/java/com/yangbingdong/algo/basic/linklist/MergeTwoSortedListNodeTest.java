@@ -1,6 +1,5 @@
 package com.yangbingdong.algo.basic.linklist;
 
-import com.yangbingdong.algo.basic.linklist.MergeTwoSortedListNode.ListNode;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
