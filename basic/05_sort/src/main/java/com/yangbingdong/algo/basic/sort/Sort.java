@@ -6,5 +6,5 @@ package com.yangbingdong.algo.basic.sort;
  */
 public interface Sort {
 
-    int[] sort(int[] els);
+    int[] sort(int[] nums);
 }

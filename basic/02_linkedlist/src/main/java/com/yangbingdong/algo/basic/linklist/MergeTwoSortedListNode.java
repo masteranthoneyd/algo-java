@@ -6,6 +6,9 @@ package com.yangbingdong.algo.basic.linklist;
  */
 public class MergeTwoSortedListNode {
 
+    /**
+     * 使用哨兵节点简化操作
+     */
     public ListNode solution(ListNode l1, ListNode l2) {
         ListNode s = new ListNode(0);
         ListNode n = s;
