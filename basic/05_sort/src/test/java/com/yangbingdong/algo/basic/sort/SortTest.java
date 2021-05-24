@@ -15,8 +15,8 @@ import java.util.Random;
 public class SortTest {
 
     Sort sort;
-    int numsListSize = 50;
-    int numsLength = 20;
+    int numsListSize = 100;
+    int numsLength = 50;
 
     @Test
     void testSort() {

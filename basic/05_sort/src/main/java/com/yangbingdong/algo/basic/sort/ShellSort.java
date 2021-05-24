@@ -2,7 +2,7 @@ package com.yangbingdong.algo.basic.sort;
 
 /**
  * @author <a href="mailto:yangbingdong1994@gmail.com">yangbingdong</a>
- * 希尔排序, 插入排序升级版, 通过步伐逐步将数组变成有序
+ * 希尔排序, 插入排序升级版, 通过步伐(一般是数组长度除以 2 递减, 直到步伐变成 1)逐步将数组变成有序
  */
 public class ShellSort implements Sort {
 
