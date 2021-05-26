@@ -1,7 +1,5 @@
 package com.yangbingdong.algo.basic.sort;
 
-import java.util.Arrays;
-
 /**
  * @author <a href="mailto:yangbingdong1994@gmail.com">yangbingdong</a>
  * 归并排序, 通过将数组拆分成对半的两个子数组再合并
@@ -9,13 +7,6 @@ import java.util.Arrays;
  * 空间复杂度 O(nlogn)
  */
 public class MergeSort implements Sort {
-
-    public static void main(String[] args) {
-        int[] nums = {3, 2, 6, 4, 5, 1, 9, 20, 13, 16};
-        Sort sort = new MergeSort();
-        sort.sort(nums);
-        System.out.println(Arrays.toString(nums));
-    }
 
     @Override
     public int[] sort(int[] nums) {

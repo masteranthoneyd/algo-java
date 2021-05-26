@@ -2,7 +2,7 @@ package com.yangbingdong.algo.basic.linklist;
 
 /**
  * @author <a href="mailto:yangbingdong1994@gmail.com">yangbingdong</a>
- * @since
+ * LeetCode https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/
  */
 public class RemoveNthNodeFromEndOfList {
 
