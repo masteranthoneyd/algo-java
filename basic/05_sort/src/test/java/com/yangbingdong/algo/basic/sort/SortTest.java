@@ -26,6 +26,7 @@ public class SortTest {
 
             Arrays.sort(nums);
             Assertions.assertArrayEquals(nums, res);
+            System.out.println(Arrays.toString(res));
         }
     }
 
@@ -33,9 +34,10 @@ public class SortTest {
         Random random = new Random();
         List<int[]> numsList = new ArrayList<>(numsListSize);
         for (int i = 0; i < numsListSize; i++) {
-            int[] nums = new int[numsLength];
-            for (int j = 0; j < numsLength; j++) {
-                nums[j] = random.nextInt(numsLength);
+            int length = random.nextInt(numsLength);
+            int[] nums = new int[length];
+            for (int j = 0; j < length; j++) {
+                nums[j] = random.nextInt(length);
             }
             numsList.add(nums);
         }

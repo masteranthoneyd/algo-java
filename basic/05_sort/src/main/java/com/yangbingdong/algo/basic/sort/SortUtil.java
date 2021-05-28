@@ -10,6 +10,9 @@ public class SortUtil {
      * 交换 els 中 a 与 b 的位置
      */
     public static void swap(int[] els, int a, int b) {
+        if (a == b) {
+            return;
+        }
         int temp = els[a];
         els[a] = els[b];
         els[b] = temp;

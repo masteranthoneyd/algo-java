@@ -1,20 +1,14 @@
 package com.yangbingdong.algo.basic.sort;
 
-import java.util.Arrays;
+import static com.yangbingdong.algo.basic.sort.SortUtil.swap;
 
 /**
  * @author <a href="mailto:yangbingdong1994@gmail.com">yangbingdong</a>
- * @since
+ * 快速排序, 从数组中选一个数 pivot(可以选择最右边的那个),
+ * 起始时假设 pivotIndex 在最左边, 从左到右遍历数组, 小于 pivot 的, 跟 nums[pivotIndex] 交换位置, pivotIndex
+ * 最后交换 nums[pivotIndex] 与最右边元素的位置
  */
-public class QuickSort implements Sort{
-
-    public static void main(String[] args) {
-        int[] nums = {3, 2, 6, 4, 5, 1, 9, 20, 13, 16};
-
-        Sort sort = new QuickSort();
-        sort.sort(nums);
-        System.out.println(Arrays.toString(nums));
-    }
+public class QuickSort implements Sort {
 
     @Override
     public int[] sort(int[] nums) {
@@ -37,14 +31,10 @@ public class QuickSort implements Sort{
 
         for (int i = left; i < right; i++) {
             if (nums[i] < pivot) {
-                int tmp = nums[i];
-                nums[i] = nums[pivotIndex];
-                nums[pivotIndex++] = tmp;
+                swap(nums, i, pivotIndex++);
             }
         }
-        int tmp = nums[pivotIndex];
-        nums[pivotIndex] = nums[right];
-        nums[right] = tmp;
+        swap(nums, pivotIndex, right);
         return pivotIndex;
     }
 }
