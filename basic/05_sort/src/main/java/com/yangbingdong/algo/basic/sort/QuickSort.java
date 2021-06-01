@@ -1,6 +1,6 @@
 package com.yangbingdong.algo.basic.sort;
 
-import static com.yangbingdong.algo.basic.sort.SortUtil.swap;
+import static com.yangbingdong.algo.basic.sort.SortUtil.partition;
 
 /**
  * @author <a href="mailto:yangbingdong1994@gmail.com">yangbingdong</a>
@@ -25,16 +25,4 @@ public class QuickSort implements Sort {
         sortInner(nums, pivot + 1, right);
     }
 
-    protected int partition(int[] nums, int left, int right) {
-        int pivotIndex = left;
-        int pivot = nums[right];
-
-        for (int i = left; i < right; i++) {
-            if (nums[i] < pivot) {
-                swap(nums, i, pivotIndex++);
-            }
-        }
-        swap(nums, pivotIndex, right);
-        return pivotIndex;
-    }
 }
