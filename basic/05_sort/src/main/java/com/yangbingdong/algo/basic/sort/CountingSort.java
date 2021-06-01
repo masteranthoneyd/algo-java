@@ -11,7 +11,7 @@ public class CountingSort implements Sort {
         if (nums.length < 2) {
             return nums;
         }
-        // 1. 找出数组最小与最大值
+        // 1. 找出数组最大值
         int max = nums[0];
         for (int i = 1; i < nums.length; i++) {
             max = Math.max(max, nums[i]);
