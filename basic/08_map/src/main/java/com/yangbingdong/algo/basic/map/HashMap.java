@@ -114,8 +114,8 @@ public class HashMap<K, V> implements Map<K, V> {
         if (node == null) {
             return;
         }
-        node = removeNode(node, k);
-        table[hash] = node;
+        removeNode(node, k);
+        table[hash] = null;
         size--;
     }
 
