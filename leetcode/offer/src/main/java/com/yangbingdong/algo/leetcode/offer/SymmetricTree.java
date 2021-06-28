@@ -2,7 +2,7 @@ package com.yangbingdong.algo.leetcode.offer;
 
 /**
  * @author <a href="mailto:yangbingdong1994@gmail.com">yangbingdong</a>
- * @since
+ * https://leetcode-cn.com/problems/dui-cheng-de-er-cha-shu-lcof/
  */
 public class SymmetricTree {
 
