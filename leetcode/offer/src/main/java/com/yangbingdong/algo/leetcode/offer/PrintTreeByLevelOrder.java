@@ -9,6 +9,7 @@ import java.util.Queue;
  * @author <a href="mailto:yangbingdong1994@gmail.com">yangbingdong</a>
  * https://leetcode-cn.com/problems/cong-shang-dao-xia-da-yin-er-cha-shu-lcof/
  * https://leetcode-cn.com/problems/cong-shang-dao-xia-da-yin-er-cha-shu-ii-lcof/
+ * https://leetcode-cn.com/problems/cong-shang-dao-xia-da-yin-er-cha-shu-iii-lcof/
  */
 public class PrintTreeByLevelOrder {
 
@@ -60,6 +61,38 @@ public class PrintTreeByLevelOrder {
         }
         return res;
     }
+
+
+    public List<List<Integer>> levelOrderIII(TreeNode root) {
+        List<List<Integer>> res = new ArrayList<>();
+        if (root == null) {
+            return res;
+        }
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        int times = 1;
+        while (!queue.isEmpty()) {
+            LinkedList<Integer> temp = new LinkedList<>();
+            for (int i = queue.size(); i > 0; i--) {
+                TreeNode node = queue.poll();
+                if (times % 2 == 0) {
+                    temp.addFirst(node.val);
+                } else {
+                    temp.addLast(node.val);
+                }
+                if (node.left != null) {
+                    queue.add(node.left);
+                }
+                if (node.right != null) {
+                    queue.add(node.right);
+                }
+            }
+            times++;
+            res.add(temp);
+        }
+        return res;
+    }
+
 
     static class TreeNode {
         int val;

@@ -1,6 +1,6 @@
 package com.yangbingdong.algo.basic.sort;
 
-import static com.yangbingdong.algo.basic.sort.SortUtil.partition;
+import static com.yangbingdong.algo.basic.sort.SortUtil.partition2;
 
 /**
  * @author <a href="mailto:yangbingdong1994@gmail.com">yangbingdong</a>
@@ -20,7 +20,7 @@ public class QuickSort implements Sort {
         if (left >= right) {
             return;
         }
-        int pivot = partition(nums, left, right);
+        int pivot = partition2(nums, left, right);
         sortInner(nums, left, pivot - 1);
         sortInner(nums, pivot + 1, right);
     }

@@ -19,7 +19,8 @@ public class SortUtil {
     }
 
     /**
-     * 从 nums 中选择一个数(一般是最右边), 将 nums[left, right] 分割成两个部分
+     * 从 nums 中选择一个数, 假设为 pivot(这里选择最右边), 将小于 pivot 的放到左边
+     * 最后, nums[left, right] 以 pivot 分割成两个部分
      * 并返回分割线的位置
      */
     public static int partition(int[] nums, int left, int right) {
@@ -33,4 +34,28 @@ public class SortUtil {
         swap(nums, pivotIndex, right);
         return pivotIndex;
     }
+
+    public static int partition2(int[] nums, int left, int right) {
+        int l = left, r = right + 1;
+        int pivot = nums[left];
+        while (true) {
+            while (nums[--r] > pivot) {
+                if (r == left) {
+                    break;
+                }
+            }
+            while (nums[++l] < pivot) {
+                if (l == right) {
+                    break;
+                }
+            }
+            if (l >= r) {
+                break;
+            }
+            swap(nums, l, r);
+        }
+        swap(nums, left, r);
+        return r;
+    }
+
 }

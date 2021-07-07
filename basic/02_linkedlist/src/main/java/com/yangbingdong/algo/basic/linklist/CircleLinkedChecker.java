@@ -24,4 +24,20 @@ public class CircleLinkedChecker {
         }
         return false;
     }
+
+    public <T> boolean check2(SNode<T> n) {
+        if (n == null || n.next == null) {
+            return false;
+        }
+
+        SNode<T> slow = n;
+        SNode<T> fast = n.next;
+
+        while (slow != fast && fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow == fast;
+    }
+
 }

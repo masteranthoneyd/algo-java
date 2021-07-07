@@ -18,4 +18,17 @@ public class MiddleOfLinkedList {
         }
         return slow;
     }
+
+    public static void main(String[] args) {
+        ListNode a = new ListNode(4);
+        ListNode b = new ListNode(5);
+        a.next = b;
+        ListNode c = new ListNode(1);
+        b.next = c;
+        ListNode d = new ListNode(9);
+        c.next = d;
+        MiddleOfLinkedList solution = new MiddleOfLinkedList();
+        ListNode middleNode = solution.middleNode(a);
+        System.out.println(middleNode.val);
+    }
 }
