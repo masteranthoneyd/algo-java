@@ -10,17 +10,14 @@ public class SinglyNodeReverseSolution {
         if (node == null || node.next == null) {
             return node;
         }
-        SNode<T> pre = null;
-        SNode<T> cur = node;
-        SNode<T> next = node.next;
-        while (cur.next != null) {
+        SNode<T> cur = node, pre = null;
+        while (cur != null) {
+            SNode<T> n = cur.next;
             cur.next = pre;
             pre = cur;
-            cur = next;
-            next = next.next;
+            cur = n;
         }
-        cur.next = pre;
-        return cur;
+        return pre;
     }
 
     public static void main(String[] args) {

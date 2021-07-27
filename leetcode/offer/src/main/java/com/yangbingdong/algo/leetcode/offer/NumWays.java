@@ -2,7 +2,7 @@ package com.yangbingdong.algo.leetcode.offer;
 
 /**
  * @author <a href="mailto:yangbingdong1994@gmail.com">yangbingdong</a>
- * @since
+ * https://leetcode-cn.com/problems/qing-wa-tiao-tai-jie-wen-ti-lcof/
  */
 public class NumWays {
 

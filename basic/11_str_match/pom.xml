@@ -3,32 +3,17 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
+        <artifactId>basic</artifactId>
         <groupId>com.yangbingdong.algo-java</groupId>
-        <artifactId>algo-java</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <packaging>pom</packaging>
-    <modules>
-        <module>01_array</module>
-        <module>02_linkedlist</module>
-        <module>03_stack</module>
-        <module>04_queue</module>
-        <module>05_sort</module>
-        <module>06_recursion</module>
-        <module>07_skiplist</module>
-        <module>08_map</module>
-        <module>09_tree</module>
-        <module>10_heap</module>
-        <module>11_str_match</module>
-    </modules>
 
-    <artifactId>basic</artifactId>
+    <artifactId>11_str_match</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
-
 
 </project>

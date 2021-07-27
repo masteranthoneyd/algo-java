@@ -1,10 +1,37 @@
 package com.yangbingdong.algo.leetcode.offer;
 
+import java.util.PriorityQueue;
+
 /**
  * @author <a href="mailto:yangbingdong1994@gmail.com">yangbingdong</a>
  * https://leetcode-cn.com/problems/zui-xiao-de-kge-shu-lcof/
  */
 public class GetLeastNumbers {
+
+
+    /**
+     * 使用大顶堆
+     */
+    public int[] getLeastNumbers2(int[] arr, int k) {
+        if (k == 0) {
+            return new int[0];
+        }
+        PriorityQueue<Integer> heap = new PriorityQueue<>((a, b) ->  b - a);
+        for (int i = 0; i < k; i++) {
+            heap.add(arr[i]);
+        }
+        for (int i = k; i < arr.length; i++) {
+            if (heap.peek() > arr[i]) {
+                heap.poll();
+                heap.add(arr[i]);
+            }
+        }
+        int[] res = new int[k];
+        for (int i = 0; i < res.length; i++) {
+            res[i] = heap.poll();
+        }
+        return res;
+    }
 
     /**
      * 使用快排加二分思想

@@ -6,6 +6,9 @@ package com.yangbingdong.algo.leetcode.offer;
  */
 public class TwoSum {
 
+    /**
+     * 双指针
+     */
     public int[] twoSum(int[] nums, int target) {
         int l = 0, r = nums.length - 1;
         while (l < r) {

@@ -5,7 +5,7 @@ import java.util.Set;
 
 /**
  * @author <a href="mailto:yangbingdong1994@gmail.com">yangbingdong</a>
- * @since
+ * https://leetcode-cn.com/problems/bu-ke-pai-zhong-de-shun-zi-lcof/
  */
 public class IsStraight {
 
